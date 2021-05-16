@@ -1,0 +1,35 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    min-width: 320px;
+    font: 400 1.4rem 'Open Sans', sans-serif;
+    color: #555;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+.wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+}
+.container {
+    max-width: 1170px;
+    padding: 15px 10px;
+    margin: 0 auto;
+}
+/*-----------------header-----------------------------*/
+.header {
+    height: 100px;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
