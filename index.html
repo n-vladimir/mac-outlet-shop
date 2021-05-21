@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MacOutlet</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -16,16 +14,278 @@
     <div class="wrapper">
         <div class="container">
             <header class="header__content">
-<!--                <a href="#" class="logo_brand">-->
-<!--                    <img src="" alt="" class="logo">-->
-<!--                </a>-->
+                <a href="#" class="logo_brand">
+                    <img src="img/logo.png" alt="logo" class="logo">
+                </a>
+                <div class="container_cart">
+                    <a href="#" class="cart">
+                        <img src="img/icons/cart.svg" alt="cart" class="cart__img">
+                        <div class="backetNum">0</div>
+                    </a>
+                </div>
+
             </header>
             <main class="main__content">
-                <div class="slider"></div>
-                <div class="search__device"></div>
+                <div class="slider">
+                    <div class="slider single-item">
+                        <div class="itemSlid">
+                            <img src="img/banners/air_pods_max_banner.jpg" alt="photo">
+                            <div class="banner_container">
+                                <h2 class="nameItem">AirPods Pro</h2>
+                                <button class="btnBannerItem">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="itemSlid">
+                            <img src="img/banners/ipad_air_banner.jpg" alt="photo">
+                            <div class="banner_container">
+                                <h2 class="nameItem white">IPad Air</h2>
+                                <button class="btnBannerItem">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="itemSlid">
+                            <img src="img/banners/apple_tv_banner.png" alt="photo">
+                            <div class="banner_container">
+                                <h2 class="nameItem">Apple TV</h2>
+                                <button class="btnBannerItem">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="itemSlid">
+                            <img src="img/banners/airpods_pro_banner.png" alt="photo">
+                            <div class="banner_container">
+                                <h2 class="nameItem white">IPad Air</h2>
+                                <button class="btnBannerItem">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="itemSlid">
+                            <img src="img/banners/iphone_12_banner.jpg" alt="photo">
+                            <div class="banner_container">
+                                <h2 class="nameItem white">IPad Air</h2>
+                                <button class="btnBannerItem">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="itemSlid">
+                            <img src="img/banners/mac_book_banner.jpg" alt="photo">
+                            <div class="banner_container">
+                                <h2 class="nameItem white">IPad Air</h2>
+                                <button class="btnBannerItem">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="itemSlid">
+                            <img src="img/banners/watch_banner.jpg" alt="photo">
+                            <div class="banner_container">
+                                <h2 class="nameItem white">IPad Air</h2>
+                                <button class="btnBannerItem">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search__device">
+                    <input id="inputSearch" type="text" placeholder="Enter device name...">
+                    <button id="btnInputFilter">
+                        <img class="imgInputFilter" src="img/icons/filter.svg" alt="btnInputFilter">
+                    </button>
+                    <button id="btnInputPrice">
+                        <img class="imgInputPrice" src="img/icons/settings.svg" alt="btnInputPrice">
+                    </button>
+                    <div class="orderListBtnInputPrice">
+                        <ul>
+                            <li><span class="nameSetting">Order</span></li>
+                            <li><span>Default</span></li>
+                            <li>
+                                <img src="img/icons/arrow_left.svg" alt="">
+                                <span class="ascending">Ascending</span>
+                            </li>
+                            <li>
+                                <img src="img/icons/arrow_left.svg" alt="">
+                                <span class="descending">Descending</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="filterAndDevice__container">
-                    <div class="filter__container"></div>
-                    <div class="device__container"></div>
+                    <div class="filter__container">
+                        <form action="#" id="leftFilter">
+                            <div class="c_select c_selectPrice">
+                                <div class="nameSelect">
+                                    <span>Price</span>
+                                    <button class="arrow"><img src="img/icons/arrow_left.svg" alt=""></button>
+                                </div>
+                                <div class="itemsSelect">
+                                    <div class="item__select">
+                                        <span>From</span>
+                                        <input type="number">
+                                    </div>
+                                    <div class="item__select">
+                                        <span>To</span>
+                                        <input type="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c_select c_selectCheck">
+                                <div class="nameSelect">
+                                    <span>Color</span>
+                                    <button class="arrow"><img src="img/icons/arrow_left.svg" alt=""></button>
+                                </div>
+                                <div class="itemsSelect">
+                                    <div class="side-left">
+                                        <label><input type="checkbox" name="red"> Red</label>
+                                        <label><input type="checkbox" name="black"> Black</label>
+                                        <label><input type="checkbox" name="blue"> Blue</label>
+                                        <label><input type="checkbox" name="gold"> Gold</label>
+                                    </div>
+                                    <div class="side-right">
+                                        <label><input type="checkbox" name="green"> Green</label>
+                                        <label><input type="checkbox" name="white"> White</label>
+                                        <label><input type="checkbox" name="grey"> Grey</label>
+                                        <label><input type="checkbox" name="yellow"> Yellow</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c_select c_selectCheck">
+                                <div class="nameSelect">
+                                    <span>Memory</span>
+                                    <button class="arrow"><img src="img/icons/arrow_left.svg" alt=""></button>
+                                </div>
+                                <div class="itemsSelect">
+                                    <div class="side-left">
+                                        <label><input type="checkbox" name="ram32"> 32 Gb</label>
+                                        <label><input type="checkbox" name="ram64"> 64 Gb</label>
+                                        <label><input type="checkbox" name="ram128"> 128 Gb</label>
+                                        <label><input type="checkbox" name="ram256"> 256 Gb</label>
+                                    </div>
+                                    <div class="side-right">
+                                        <label><input type="checkbox" name="ram512"> 512 GB</label>
+                                        <label><input type="checkbox" name="ram1024"> 1 TB</label>
+                                        <label><input type="checkbox" name="ram2048"> 2 TB</label>
+                                        <label><input type="checkbox" name="ram4096"> 4 TB</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c_select c_selectCheck">
+                                <div class="nameSelect">
+                                    <span>OS</span>
+                                    <button class="arrow"><img src="img/icons/arrow_left.svg" alt=""></button>
+                                </div>
+                                <div class="itemsSelect">
+                                    <div class="side-left">
+                                        <label><input type="checkbox" name="iOS"> iOS</label>
+                                        <label><input type="checkbox" name="macOS"> Mac OS</label>
+                                        <label><input type="checkbox" name="tvOS"> tvOS</label>
+                                        <label><input type="checkbox" name="watchOS"> Watch OS</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c_select c_selectCheck">
+                                <div class="nameSelect">
+                                    <span>Display</span>
+                                    <button class="arrow"><img src="img/icons/arrow_left.svg" alt=""></button>
+                                </div>
+                                <div class="itemsSelect">
+                                    <div class="side-left">
+                                        <label><input type="checkbox" name="inch2-5"> 2 - 5 inch</label>
+                                        <label><input type="checkbox" name="inch5-7"> 5 - 7 inch</label>
+                                        <label><input type="checkbox" name="inch7-12"> 7 - 12 inch</label>
+                                        <label><input type="checkbox" name="inch12-16"> 12 - 16 inch</label>
+                                        <label><input type="checkbox" name="inch16Add"> +16 inch</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="device__container">
+                        <div class="device__items">
+<!--                            <div class="item">-->
+<!--                                <div class="device_item">-->
+<!--                                    <img class="like" src="img/icons/like_empty.svg" alt="like">-->
+<!--                                    <img class="imgDevice" src="img/items/iphone11.jpeg" alt="iphone11MAX">-->
+<!--                                    <h2 class="nameDevice">iPhone 11 PRO Max</h2>-->
+<!--                                    <p class="availability"><img class="imgAvailability" src="img/icons/close.svg" alt="imgAvailability">   0 left in stock</p>-->
+<!--                                    <p class="priceDevice"> Price: 1100 $</p>-->
+<!--                                    <button class="btnDevice disabled">Add to cart</button>-->
+<!--                                </div>-->
+<!--                                <div class="device_about">-->
+<!--                                    <img class="like" src="img/icons/like_filled_red.svg" alt="like">-->
+<!--                                    <span class="reviews"><span class="procent">95%</span> Positive reviews Above avarage</span>-->
+<!--                                    <span class="num">560<span class="ins"> orders</span></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <div class="device_item">-->
+<!--                                    <img class="like" src="img/icons/like_empty.svg" alt="like">-->
+<!--                                    <img class="imgDevice" src="img/items/iphone11.jpeg" alt="iphone11MAX">-->
+<!--                                    <h2 class="nameDevice">iPhone 11 PRO Max</h2>-->
+<!--                                    <p class="availability"><img class="imgAvailability" src="img/icons/close.svg" alt="imgAvailability">   0 left in stock</p>-->
+<!--                                    <p class="priceDevice"> Price: 1100 $</p>-->
+<!--                                    <button class="btnDevice disabled">Add to cart</button>-->
+<!--                                </div>-->
+<!--                                <div class="device_about">-->
+<!--                                    <img class="like" src="img/icons/like_filled_red.svg" alt="like">-->
+<!--                                    <span class="reviews"><span class="procent">95%</span> Positive reviews Above avarage</span>-->
+<!--                                    <span class="num">560<span class="ins"> orders</span></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <div class="device_item">-->
+<!--                                    <img class="like" src="img/icons/like_empty.svg" alt="like">-->
+<!--                                    <img class="imgDevice" src="img/items/iphone11.jpeg" alt="iphone11MAX">-->
+<!--                                    <h2 class="nameDevice">iPhone 11 PRO Max</h2>-->
+<!--                                    <p class="availability"><img class="imgAvailability" src="img/icons/close.svg" alt="imgAvailability">   0 left in stock</p>-->
+<!--                                    <p class="priceDevice"> Price: 1100 $</p>-->
+<!--                                    <button class="btnDevice disabled">Add to cart</button>-->
+<!--                                </div>-->
+<!--                                <div class="device_about">-->
+<!--                                    <img class="like" src="img/icons/like_filled_red.svg" alt="like">-->
+<!--                                    <span class="reviews"><span class="procent">95%</span> Positive reviews Above avarage</span>-->
+<!--                                    <span class="num">560<span class="ins"> orders</span></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <div class="device_item">-->
+<!--                                    <img class="like" src="img/icons/like_empty.svg" alt="like">-->
+<!--                                    <img class="imgDevice" src="img/items/iphone11.jpeg" alt="iphone11MAX">-->
+<!--                                    <h2 class="nameDevice">iPhone 11 PRO Max</h2>-->
+<!--                                    <p class="availability"><img class="imgAvailability" src="img/icons/close.svg" alt="imgAvailability">   0 left in stock</p>-->
+<!--                                    <p class="priceDevice"> Price: 1100 $</p>-->
+<!--                                    <button class="btnDevice disabled">Add to cart</button>-->
+<!--                                </div>-->
+<!--                                <div class="device_about">-->
+<!--                                    <img class="like" src="img/icons/like_filled_red.svg" alt="like">-->
+<!--                                    <span class="reviews"><span class="procent">95%</span> Positive reviews Above avarage</span>-->
+<!--                                    <span class="num">560<span class="ins"> orders</span></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <div class="device_item">-->
+<!--                                    <img class="like" src="img/icons/like_empty.svg" alt="like">-->
+<!--                                    <img class="imgDevice" src="img/items/iphone11.jpeg" alt="iphone11MAX">-->
+<!--                                    <h2 class="nameDevice">iPhone 11 PRO Max</h2>-->
+<!--                                    <p class="availability"><img class="imgAvailability" src="img/icons/close.svg" alt="imgAvailability">   0 left in stock</p>-->
+<!--                                    <p class="priceDevice"> Price: 1100 $</p>-->
+<!--                                    <button class="btnDevice disabled">Add to cart</button>-->
+<!--                                </div>-->
+<!--                                <div class="device_about">-->
+<!--                                    <img class="like" src="img/icons/like_filled_red.svg" alt="like">-->
+<!--                                    <span class="reviews"><span class="procent">95%</span> Positive reviews Above avarage</span>-->
+<!--                                    <span class="num">560<span class="ins"> orders</span></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <div class="device_item">-->
+<!--                                    <img class="like" src="img/icons/like_empty.svg" alt="like">-->
+<!--                                    <img class="imgDevice" src="img/items/iphone11.jpeg" alt="iphone11MAX">-->
+<!--                                    <h2 class="nameDevice">iPhone 11 PRO Max</h2>-->
+<!--                                    <p class="availability"><img class="imgAvailability" src="img/icons/close.svg" alt="imgAvailability">   0 left in stock</p>-->
+<!--                                    <p class="priceDevice"> Price: 1100 $</p>-->
+<!--                                    <button class="btnDevice disabled">Add to cart</button>-->
+<!--                                </div>-->
+<!--                                <div class="device_about">-->
+<!--                                    <img class="like" src="img/icons/like_filled_red.svg" alt="like">-->
+<!--                                    <span class="reviews"><span class="procent">95%</span> Positive reviews Above avarage</span>-->
+<!--                                    <span class="num">560<span class="ins"> orders</span></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
