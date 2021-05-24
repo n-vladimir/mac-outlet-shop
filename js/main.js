@@ -24,6 +24,28 @@ function launchListHandlers(handlers) {
 launchListHandlers(listHandlers);
 
 
+//-----------------------modal
+
+const showModal = (data) => {
+  const modal = document.querySelector('.modal');
+
+};
+
+
+
+
+
+
+
+
+
+
+//-----------------renderCard
+/**
+ *
+ * @param item
+ * @returns {HTMLDivElement}
+ */
 const renderCard = (item) => {
     const divElemItem = document.createElement('div');
     const divElemItemInfo = document.createElement('div');
@@ -34,9 +56,17 @@ const renderCard = (item) => {
 
     divElemItemInfo.innerHTML = `
         <i class="fas fa-heart like"></i>
-        <img class="imgDevice" src="img/${item.imgUrl}" alt="iphone11MAX">
+        <img class="imgDevice" src="img/${item.imgUrl}" alt="device ${item.name}">
         <h2 class="nameDevice">${item.name}</h2>
-        <p class="availability"><img class="imgAvailability" src="img/icons/close.svg" alt="imgAvailability">${item.orderInfo.inStock} left in stock</p>
+        <p class="availability">
+        ${(function () {
+            if(item.orderInfo.inStock > 0){
+                return '<img class="imgAvailability" src="img/icons/checkDevice.svg" alt="imgAvailability">';
+            } else {
+                return '<img class="imgAvailability" src="img/icons/close.svg" alt="imgAvailability">';
+            }
+        })()}
+        ${item.orderInfo.inStock} left in stock</p>
         <p class="priceDevice"> Price: ${item.price} $</p>
     `;
 
@@ -44,6 +74,7 @@ const renderCard = (item) => {
     btn.className = 'btnDevice';
     btn.id = item.id;
     btn.innerText = 'Add to cart';
+    if(item.orderInfo.inStock <= 0) btn.classList.add('disabled');
     divElemItemInfo.appendChild(btn);
 
     divElemItemAbout.innerHTML = `
@@ -54,6 +85,7 @@ const renderCard = (item) => {
     // divElemItemInfo.appendChild(btnLike);
     divElemItem.appendChild(divElemItemInfo);
     divElemItem.appendChild(divElemItemAbout);
+
 
     return divElemItem;
 
@@ -67,6 +99,14 @@ const renderCards = (item) => {
 };
 
 renderCards(items);
+
+
+const btnLike = document.querySelectorAll('.like');
+btnLike.forEach((item) => {
+    item.onclick = function () {
+        item.classList.toggle('like-full');
+    }
+});
 
 
 
