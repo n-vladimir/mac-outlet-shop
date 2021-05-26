@@ -312,7 +312,7 @@ a.logo_brand img {
 .device_item .imgDevice {
     height: 200px;
 }
-.device_item .btnDevice {
+.btnDevice {
     border: none;
     border-radius: 5%;
     background-color: var(--btn-color);
@@ -321,7 +321,7 @@ a.logo_brand img {
     color: #fff;
     cursor: pointer;
 }
-.device_item .btnDevice.disabled {
+.btnDevice.disabled {
     background-color: #e5e5e5;
 }
 
@@ -347,6 +347,48 @@ a.logo_brand img {
 .device_about .num {
     width: 35px;
     margin-left: auto;
+}
+/*-----------------------------------------Modal*/
+.modal {
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+.modal__container {
+    display: flex;
+    max-width: 1024px;
+    padding: 30px 15px;
+    background-color: #fff;
+}
+.active--modal {
+    display: flex;
+}
+.modal__container .imgUnit, .modal__container .priceAndBtnUnit {
+    width: 30%;
+}
+.modal__container .imgUnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal__container .imgUnit img {
+    width: 80%;
+    padding: 30px;
+}
+.modal__container .infoUnit {
+    width: 40%;
+}
+.modal__container .infoUnit ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
 }
 
 /*-------------------------------------ACTIVE JS*/
