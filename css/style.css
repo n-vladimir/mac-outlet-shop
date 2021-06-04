@@ -25,6 +25,9 @@ img {
     padding: 15px 10px;
     margin: 0 auto;
 }
+button {
+    cursor: pointer;
+}
 /*---------Custom properties------------------------*/
 :root {
     /*--item-width: calc((100% / 3) - 20px);*/
@@ -56,7 +59,7 @@ a.logo_brand img {
     padding: 8px;
 
 }
-.backetNum {
+.basketNum {
     position: absolute;
     display: flex;
     width: 30px;
@@ -213,9 +216,16 @@ a.logo_brand img {
     cursor: pointer;
     /*margin-bottom: 10px;*/
 }
+.input-PriceFilter {
+    display: flex;
+    flex-direction: column;
+}
+.input-PriceFilter > * {
+    margin: 10px 0;
+}
 .itemsSelect {
     display: none;
-    border-bottom: 1px solid var(--border-color);
+    /*border-bottom: 1px solid var(--border-color);*/
 }
 .c_select .nameSelect button {
     border: none;
@@ -244,26 +254,8 @@ a.logo_brand img {
     border-radius: 5px;
     margin: 0 auto;
 }
-.c_selectPrice .itemsSelect {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    padding-right: 5%;
-    padding-left: 5%;
-}
-
-/*--------------------------------------colorCheck*/
-.c_selectCheck .itemsSelect  {
-    justify-content: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: left;
-}
-.c_selectCheck .itemsSelect .side-right {
-    margin-left: 15%;
-}
-.c_selectCheck .itemsSelect .side-left label, .c_selectCheck .itemsSelect .side-right label {
-    display: block;
+.c_select .itemsSelect {
+    width: 50%;
 }
 /*----------------------------------------DEVICE*/
 .device__items {
@@ -312,16 +304,16 @@ a.logo_brand img {
 .device_item .imgDevice {
     height: 200px;
 }
-.device_item .btnDevice {
+.btnDevice {
     border: none;
-    border-radius: 5%;
+    border-radius: 5px;
     background-color: var(--btn-color);
     width: 60%;
     height: 50px;
     color: #fff;
-    cursor: pointer;
+    margin: 0 auto 20px auto;
 }
-.device_item .btnDevice.disabled {
+.btnDevice.disabled {
     background-color: #e5e5e5;
 }
 
@@ -348,7 +340,120 @@ a.logo_brand img {
     width: 35px;
     margin-left: auto;
 }
+/*-----------------------------------------Modal*/
+.modal {
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+.modal__container {
+    display: flex;
+    max-width: 1024px;
+    padding: 30px 15px;
+    background-color: #fff;
+}
+.active--modal {
+    display: flex;
+}
+.modal__container .imgUnit, .modal__container .priceAndBtnUnit {
+    width: 30%;
+}
+.modal__container .imgUnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal__container .imgUnit img {
+    width: 80%;
+    padding: 30px;
+}
+.modal__container .infoUnit {
+    width: 40%;
+}
+.modal__container .infoUnit ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
 
+/*-------------------------------------cart modal*/
+.cart__modal-check {
+    display: none;
+    width: 400px;
+    min-width: 320px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    z-index: 9;
+}
+.cart__modal-check-active {
+    display: block;
+}
+.cart__modal-check .info-head {
+    padding: 20px 0;
+}
+.cart__modal-check h6 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.cart__modal-check p {
+    margin: 0;
+
+}
+.cart__modal-check hr {
+    border: 1px solid var(--border-color);
+}
+.cart__modal-check .item-device {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.cart__modal-check .item-device .image {
+    width: 150px;
+}
+.cart__modal-check .item-device input {
+    width: 25px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+}
+.cart__modal-check .item-device .quantity button {
+    border: none;
+    background-color: var(--btn-color);
+}
+.item-device .delete-btn {
+    padding: 0;
+    border: none;
+    background-color: pink;
+    width: 16px;
+    height: 18px;
+}
+.item-device .delete-btn {
+    color: red;
+}
+.cart__modal-check .totalAndPrice {
+    background-color: darkturquoise;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+#btn_cart_buy {
+    width: 50%;
+    padding: 10px 0;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn-color);
+}
 /*-------------------------------------ACTIVE JS*/
 .active {display: block;}
 
