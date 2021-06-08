@@ -524,7 +524,7 @@ const items = [
             depth: '0.6', // cm
             weight: '1.07', // Кг
         },
-        os: 'macOS',
+        os: 'Watch OS',
         InTheBox: ['Case', 'Solo Loop', '1m Magnetic Charging Cable'],
         orderInfo: {
         	inStock: 90, // кол-во едениц товара в наличии
