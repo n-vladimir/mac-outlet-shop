@@ -86,6 +86,7 @@ class Modal {
         this.buildDom();
         this.toggleOpen();
         this.launchModalListeners();
+        this.addCartProductBtn();
     }
     buildDom() {
         const createPreview = () =>
@@ -128,6 +129,7 @@ class Modal {
             <div class="priceAndBtnUnit">
                 <p class="priceDevice">$ ${this.itemToShow.price}</p>
                 <p>${this.itemToShow.orderInfo.inStock} left in stock</p>
+                <button class="btnDevice addToCartBtn" data-id="${this.itemToShow.id}">Add to Cart</button>
             </div>
             `;
         const createBody = () => `<div class="modal__container">
@@ -154,7 +156,16 @@ class Modal {
                 this.toggleOpen();
             }
         }.bind(this);
+
     }
+    addCartProductBtn() {
+        const cartItem = document.querySelector('.addToCartBtn');
+        cartItem.onclick = function (e) {
+            // console.log(items[e.target.getAttribute('data-id')]);
+            cart.addToCart(items[e.target.getAttribute('data-id')]);
+        };
+    }
+
 }
 
 const btnLike = document.querySelectorAll('.like');
@@ -436,3 +447,14 @@ class Filters {
     }
 }
 new Filters();
+
+const btnBannerItem = document.querySelectorAll('.btnBannerItem');
+
+console.log(btnBannerItem);
+
+btnBannerItem.forEach(item => {
+    item.onclick = function (e) {
+        // console.log(items[e.target.getAttribute('data-id')])
+        cart.addToCart(items[e.target.getAttribute('data-id')])
+    };
+})
