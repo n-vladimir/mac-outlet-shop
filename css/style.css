@@ -77,6 +77,13 @@ a.logo_brand img {
 .main__content .slider {
     margin-bottom: 30px;
 }
+select#sortByPrice {
+    padding: 15px 30px;
+    overflow-y: hidden;
+}
+select#sortByPrice option {
+    height: 40px;
+}
 /*-----------------------------------Slider*/
 .itemSlid {
     position: relative;
@@ -229,7 +236,7 @@ a.logo_brand img {
 }
 .c_select .nameSelect button {
     border: none;
-    background-color: transparent;
+    background-color: var(--btn-color);
     padding: 0;
     cursor: pointer;
 }
@@ -257,6 +264,7 @@ a.logo_brand img {
 .c_select .itemsSelect {
     width: 50%;
 }
+
 /*----------------------------------------DEVICE*/
 .device__items {
     display: flex;
@@ -459,6 +467,11 @@ a.logo_brand img {
 
 .activeFilterName {
     display: flex;
+}
+
+.c_select .PriceFilter .itemsSelect {
+    width: 100%;
+
 }
 
 
