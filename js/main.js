@@ -454,7 +454,7 @@ console.log(btnBannerItem);
 
 btnBannerItem.forEach(item => {
     item.onclick = function (e) {
-        // console.log(items[e.target.getAttribute('data-id')])
+        console.log(items[e.target.getAttribute('data-id')])
         cart.addToCart(items[e.target.getAttribute('data-id')])
     };
 })
